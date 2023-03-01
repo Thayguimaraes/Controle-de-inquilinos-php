@@ -11,17 +11,18 @@
 
 </head>
 <body>
+  <br>
     <div class="container">
         <div class="card">
             <div class="card-header">
                 <div class="card-header">
                     <h3>Dados do inquilino</h3>
                 </div>
-    <form action="">
+    <form method="post" action="processa.php">
         <div class="form-row">
             <div class="col-md-8 mb-3">
               <label for="validationCustom01">Nome completo</label>
-              <input type="text" class="form-control" id="" placeholder="Digite o Nome completo" required>
+              <input type="text" class="form-control" id="nomeCompletoInquilino" name="nomeCompletoInquilino" placeholder="Digite o Nome completo" required>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -30,37 +31,36 @@
             <div class="form-row">
                 <div class="col-md-4 mb-3">
                   <label for="validationCustom04">CPF</label>
-                  <input type="text" class="form-control" id="" placeholder="Digite o CPF" required>
+                  <input type="text" class="form-control" id="cpfInquilino" name="cpfInquilino" placeholder="Digite o CPF" required>
                   <div class="invalid-feedback">
                     Gentileza preencher este campo
                   </div>
                 </div>
                 <div class="col-md-4 mb-3">
                   <label for="validationCustom05">Telefone</label>
-                  <input type="text" class="form-control" id="" placeholder="Digite o Telefone" required>
+                  <input type="text" class="form-control" id="telefoneInquilino" name="telefoneInquilino" placeholder="Digite o Telefone" required>
                   <div class="invalid-feedback">
                     Gentileza preencher este campo
                   </div>
                 </div>
                 <div class="col-md-4 mb-3">
                   <label for="validationCustom05">Data de nascimento</label>
-                  <input type="text" class="form-control" id="" placeholder="Digite sua data de nascimento" required>
+                  <input type="text" class="form-control" id="dataNascimentoInquilino"  name="dataNascimentoInquilino" placeholder="Digite sua data de nascimento" required>
                   <div class="invalid-feedback">
                     Gentileza preencher este campo
                   </div>
                 </div>
               </div>
               <br>
-              <button class="btn btn-success">Enviar</button>
+              <button type="submit" class="btn btn-success">Enviar</button>
     </form>
 
 </div>
 </div>
 
 </div>
-    <script src="../aluguel-imoveis-php/js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+
 </body>
 
 </html>
