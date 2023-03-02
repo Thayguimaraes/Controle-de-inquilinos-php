@@ -18,7 +18,7 @@
                 <div class="card-header">
                     <h3>Dados do inquilino</h3>
                 </div>
-    <form method="post" action="processa.php">
+    <form method="post" action="processainquilinos.php">
         <div class="form-row">
             <div class="col-md-8 mb-3">
               <label for="validationCustom01">Nome completo</label>
@@ -51,8 +51,17 @@
                   </div>
                 </div>
               </div>
+              <div class="row">
+                <div class="col-md-5">
+                  <label for="">Imovel</label>
+                  <input type="text" class="form-control" id="imovelAlugado"  name="imovelAlugado">
+                </div>
+              </div>
               <br>
               <button type="submit" class="btn btn-success">Enviar</button>
+              <br>
+              <br>  
+    
     </form>
 
 </div>

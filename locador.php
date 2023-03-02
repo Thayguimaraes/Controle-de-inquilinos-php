@@ -12,17 +12,19 @@
 
 </head>
 <body>
-    <div class="container">
+    
+<br>
+<div class="container">
         <div class="card">
             <div class="card-header">
                 <div class="card-header">
-                    <h3>Adicionar um imovel</h3>
+                    <h3>Dados do imovel</h3>
                 </div>
-    <form method="post" action="processa.php">
+<form method="post" action="processaimovel.php">
         <div class="form-row">
             <div class="col-md-8 mb-3">
               <label for="validationCustom01">Nome completo do proprietario</label>
-              <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o Nome completo" required>
+              <input type="text" class="form-control" id="nomeLocador" name="nomeLocador" placeholder="Digite o Nome completo" required>
               <div class="valid-feedback">
                 Looks good!
               </div>
@@ -72,67 +74,12 @@
                   </div>
                 </div>
               </div>
+                 </div>
               <br>
-              <button class="btn btn-success">Enviar</button>
-    </form>
-</div>
-</div>
-
-</div>
-
-
-<br>
-<br>
-<br>
-
-<div class="container">
-        <div class="card">
-            <div class="card-header">
-                <div class="card-header">
-                    <h3>Imoveis ja Cadastrados</h3>
-                </div>
-    <form method="" action="">
-        <div class="form-row">
-            <div class="col-md-8 mb-3">
-              <label for="validationCustom01">Nome completo do proprietario</label>
-              <input type="text" class="form-control" id="nome" name="nome">
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="validationCustom01">Valor do Alugel</label>
-              <input type="text" class="form-control" id="valorAluguel" name="valorAluguel">
-            </div>
-            </div>
-            <div class="form-row">
-                <div class="col-md-4 mb-4">
-                  <label for="validationCustom03">Rua</label>
-                  <input type="text" class="form-control" id="rua" name="rua">
-                </div>
-                <div class="col-md-2 mb-2">
-                  <label for="validationCustom03">Nº</label>
-                  <input type="text" class="form-control" id="numero" name="numero">
-                </div>
-                <div class="col-md-2 mb-2">
-                  <label for="validationCustom04">Bairro</label>
-                  <input type="text" class="form-control" id="bairro" name="bairro">
-                </div>
-                <div class="col-md-2 mb-2">
-                  <label for="validationCustom05">Estado</label>
-                  <input type="text" class="form-control" id="estado" name="estado">
-                </div>
-                <div class="col-md-2 mb-2">
-                  <label for="validationCustom05">CEP</label>
-                  <input type="text" class="form-control" id="cep" name="cep">
-                </div>
-              </div>
-
-              <div class="row">
-              <div class="col-md-10 mb-3">
-                  <label for="validationCustom05">Inquilinos residentes</label>
-                  <input type="text" class="form-control" id="residentes" name="residentes">
-                </div>
-              </div>
               <br>
-              <button class="btn btn-success">Enviar</button>
+              <button type="submit" class="btn btn-success">Enviar</button>
+
+
     </form>
 </div>
 </div>

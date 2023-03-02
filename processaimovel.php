@@ -3,13 +3,16 @@
 
 include_once("conexao.php");
 
-$nome = $_POST['nome'];
-$cpf = $_POST['valorAluguel'];
-$telefone = $_POST['rua'];
-$dataNascimento = $_POST['dataNascimentoInquilino'];
+$nomeLocador = $_POST['nomeLocador'];
+$valorAluguel = $_POST['valorAluguel'];
+$rua = $_POST['rua'];
+$numero = $_POST['numero'];
+$bairro = $_POST['bairro'];
+$estado = $_POST['estado'];
+$cep = $_POST['cep'];
 
 
-$result = mysqli_query($link, "INSERT INTO inquilino(nome, cpf, telefone, dataNascimento, id) VALUES ('$nome','$cpf','$telefone','$dataNascimento', NOW())");
+$result = mysqli_query($link, "INSERT INTO imoveis(nomeLocador, valorAluguel, rua, numero, bairro, estado, cep, id_imovel, id_inquilino) VALUES ('$nomeLocador','$valorAluguel','$rua','$numero', '$bairro', '$estado', '$numero',NOW(), NOW())");
 
 
 
