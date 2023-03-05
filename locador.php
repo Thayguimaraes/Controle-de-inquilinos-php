@@ -1,3 +1,30 @@
+<?php
+
+    if(isset($_POST['submit']))
+    {
+
+        
+include_once("conexao.php");
+
+$nomeLocador = $_POST['nomeLocador'];
+$valorAluguel = $_POST['valorAluguel'];
+$rua = $_POST['rua'];
+$numero = $_POST['numero'];
+$bairro = $_POST['bairro'];
+$estado = $_POST['estado'];
+$cep = $_POST['cep'];
+
+$mensagem = "<div class='alert alert-success' role='alert'>Inscrição realizada com sucesso, aguarde você está sendo redirecionado ...</div>";
+
+$result = mysqli_query($link, "INSERT INTO imovel (nome, Aluguel, rua, numero, bairro , estado , cep) VALUES ('$nomeLocador','$valorAluguel','$rua','$numero', '$bairro', '$estado', '$cep')");
+ 
+ header('Location: index.php');
+ echo $mensagem;
+
+    }
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,19 +35,35 @@
     <title>Locador</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <style>
+      body{
+        background-image:linear-gradient(#00BFFF,#4F4F4F);
+        height: 100vh;
 
+      }
+      
+    </style>
 
 </head>
 <body>
-    
+<nav class="navbar fixed-top navbar-light bg-light">
+    <a class="navbar-brand" href="index.php">Inquilinos Ja Cadastrados</a>
+    <a class="navbar-brand" href="locador.php">Cadastrar imovel</a>
+    <a class="navbar-brand" href="inquilino.php">Cadastrar Inquilino</a>
+</nav>
 <br>
+<br>
+<br>
+<br>
+<br>
+
 <div class="container">
         <div class="card">
             <div class="card-header">
                 <div class="card-header">
                     <h3>Dados do imovel</h3>
                 </div>
-<form method="post" action="processaimovel.php">
+<form method="post" action="locador.php">
         <div class="form-row">
             <div class="col-md-8 mb-3">
               <label for="validationCustom01">Nome completo do proprietario</label>
@@ -77,7 +120,10 @@
                  </div>
               <br>
               <br>
-              <button type="submit" class="btn btn-success">Enviar</button>
+              <button class="button" id="button">
+              <input type="submit" name="submit" id="submit" placeholder="Enviar">
+              </button>
+            
 
 
     </form>
@@ -85,7 +131,6 @@
 </div>
 
 </div>
-
 
 
 </body>
