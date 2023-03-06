@@ -10,11 +10,10 @@ $dbname = 'sistemadeimoveis';
 
 $link = new mysqli($servidor, $usuario, $senha, $dbname);
 
-if($link->connect_errno)
-{
-echo "erro ao conectar ao banco de dados!";
-}else{
+if ($link->connect_errno) {
+    echo "erro ao conectar ao banco de dados!";
+} else {
     "Conexão efetuada com sucesso";
-} 
+}
 
 ?>
